@@ -24,6 +24,15 @@ return {
         require("astronvim.utils.status").heirline.buffer_picker(
           function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
         )
+    ["<C-p>"] = { function() require("telescope.builtin").find_files() end, desc = "Find files" },
+    ["<leader>o"] = { ":Telescope file_browser path=%:p:h select_buffer=true <CR>", desc = "Telescope file browser"},
+    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+    ["<leader>bD"] = {
+      function()
+        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr)
+          require("astronvim.utils.buffer").close(
+            bufnr)
+        end)
       end,
       desc = "Pick to close",
     },
