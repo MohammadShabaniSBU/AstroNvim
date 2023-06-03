@@ -49,6 +49,11 @@ return {
     servers = {
       -- "pyright"
     },
+    config = {
+      css_lsp = {
+        filetypes = { "css", "scss", "less", "vue" }
+      },
+    },
   },
   -- Configure require("lazy").setup() options
   lazy = {
@@ -56,7 +61,7 @@ return {
     performance = {
       rtp = {
         -- customize default disabled vim plugins
-        disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
+        disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin", "null-ls" },
       },
     },
   },
