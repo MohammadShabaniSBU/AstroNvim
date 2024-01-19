@@ -23,13 +23,13 @@ return {
     config = function()
         require("neoai").setup({
             -- Options go here
-            models = {
-                {
-                    name = "openai",
-                    model = "gpt-3.5-turbo",
-                    params = nil,
-                },
-            },
+            -- models = {
+            --     {
+            --         name = "openai",
+            --         model = "gpt-3.5-turbo",
+            --         params = nil,
+            --     },
+            -- },
         })
     end,
 }
